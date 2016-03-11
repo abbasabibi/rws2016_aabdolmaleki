@@ -14,7 +14,7 @@ find_package(catkin REQUIRED COMPONENTS
 )
 
 ## System dependencies are found with CMake's conventions
-# find_package(Boost REQUIRED COMPONENTS system)
+find_package(Boost REQUIRED COMPONENTS system)
 
 
 ## Uncomment this if the package has a setup.py. This macro ensures
@@ -103,10 +103,10 @@ find_package(catkin REQUIRED COMPONENTS
 ## CATKIN_DEPENDS: catkin_packages dependent projects also need
 ## DEPENDS: system dependencies of this project that dependent projects also need
 catkin_package(
-#  INCLUDE_DIRS include
-#  LIBRARIES player_aabdolmaleki
-#  CATKIN_DEPENDS roscpp rospy std_msgs
-#  DEPENDS system_lib
+ #INCLUDE_DIRS include
+ #LIBRARIES player_moliveira
+ CATKIN_DEPENDS roscpp rospy std_msgs
+ DEPENDS system_lib
 )
 
 ###########
@@ -121,26 +121,32 @@ include_directories(
 )
 
 ## Declare a C++ library
-# add_library(player_aabdolmaleki
-#   src/${PROJECT_NAME}/player_aabdolmaleki.cpp
+# add_library(player_moliveira
+#   src/${PROJECT_NAME}/player_moliveira.cpp
 # )
 
 ## Add cmake target dependencies of the library
 ## as an example, code may need to be generated before libraries
 ## either from message generation or dynamic reconfigure
-# add_dependencies(player_aabdolmaleki ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(player_moliveira ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Declare a C++ executable
-# add_executable(player_aabdolmaleki_node src/player_aabdolmaleki_node.cpp)
+# add_executable(player_moliveira_node src/player_moliveira_node.cpp)
 add_executable(player_aabdolmaleki_node src/player_aabdolmaleki_node.cpp)
+#add_executable(player_moliveira_node_classtest src/player_moliveira_node_classtest.cpp)
+
 ## Add cmake target dependencies of the executable
 ## same as for the library above
-# add_dependencies(player_aabdolmaleki_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
+# add_dependencies(player_moliveira_node ${${PROJECT_NAME}_EXPORTED_TARGETS} ${catkin_EXPORTED_TARGETS})
 
 ## Specify libraries to link a library or executable target against
-# target_link_libraries(player_aabdolmaleki_node
-#   ${catkin_LIBRARIES}
-# )
+target_link_libraries(player_aabdolmaleki_node
+  ${catkin_LIBRARIES}
+)
+#target_link_libraries(player_moliveira_node_classtest
+#  ${catkin_LIBRARIES}
+#)
+
 
 #############
 ## Install ##
@@ -157,7 +163,7 @@ add_executable(player_aabdolmaleki_node src/player_aabdolmaleki_node.cpp)
 # )
 
 ## Mark executables and/or libraries for installation
-# install(TARGETS player_aabdolmaleki player_aabdolmaleki_node
+# install(TARGETS player_moliveira player_moliveira_node
 #   ARCHIVE DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   LIBRARY DESTINATION ${CATKIN_PACKAGE_LIB_DESTINATION}
 #   RUNTIME DESTINATION ${CATKIN_PACKAGE_BIN_DESTINATION}
@@ -182,7 +188,7 @@ add_executable(player_aabdolmaleki_node src/player_aabdolmaleki_node.cpp)
 #############
 
 ## Add gtest based cpp test target and link libraries
-# catkin_add_gtest(${PROJECT_NAME}-test test/test_player_aabdolmaleki.cpp)
+# catkin_add_gtest(${PROJECT_NAME}-test test/test_player_moliveira.cpp)
 # if(TARGET ${PROJECT_NAME}-test)
 #   target_link_libraries(${PROJECT_NAME}-test ${PROJECT_NAME})
 # endif()
