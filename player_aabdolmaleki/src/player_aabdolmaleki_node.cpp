@@ -340,7 +340,10 @@ class Player
                return prey_name;
            }
 
-
+           string getNameofMyplayer(void)
+           {
+        	   	  return hunter_team->players[3]->name;
+           }
            string getNameOfClosestHunter(void)
            {
                double prey_dist = getDistance(*hunter_team->players[0]);
@@ -414,18 +417,18 @@ class Player
                //4. Move maximum displacement towards angle to prey (limited by min, max)
 
                //Step 1
-               //string closest_prey = getNameOfClosestPrey();
+              // string closest_prey = getNameOfClosestPrey();
               // string closest_hunter = getNameOfClosestHunter();
 
                //ROS_INFO("Closest prey is %s", closest_prey.c_str());
                //ROS_INFO("Closest hunter is %s", closest_hunter.c_str());
 
-               int flag = 0; //hunt
-               double angle;
-               double displacement;
+               //int flag = 0; //hunt
+               //double angle;
+               //double displacement;
 
                //double distClosestPrey= getDistanceOfClosestPrey();
-              //double distClosestHunter = getDistanceOfClosestHunter();
+               //double distClosestHunter = getDistanceOfClosestHunter();
 
                //if(distClosestPrey < distClosestHunter)
             	//   flag = 0;
@@ -435,20 +438,20 @@ class Player
 
                //flag = 0;
                //string a();
-               if(flag == 0)
+               //if(flag == 0)
 
-               {
-            	   angle = getAngle("pdias");
+               //{
+            	   double angle = getAngle(getNameofMyplayer());
 
                //Step 3
-               	   displacement = msg.cat; //I am a cat, others may choose another animal
-               }
+               	  double displacement = msg.cat; //I am a cat, others may choose another animal
+               //}
 
-               else
-               {
-            	  // angle = getAngle(closest_hunter) + M_PI;
-            	   displacement = msg.cat;
-               }
+               //else
+               //{
+            	 //  angle = getAngle(closest_hunter) + M_PI;
+            	  // displacement = msg.cat;
+               //}
 
 
 
