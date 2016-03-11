@@ -456,7 +456,7 @@ class Player
 
 
                //Step 4
-               move(displacement, angle);
+               move(-1*displacement, -1*angle);
 
            }
 
