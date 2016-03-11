@@ -47,7 +47,9 @@
   <run_depend>rospy</run_depend>
   <run_depend>std_msgs</run_depend>
 
-
+  <build_depend>rws2016_msgs</build_depend>
+  <build_depend>rws2016_libs</build_depend>                                       <run_depend>rws2016_msgs</run_depend>
+  <run_depend>rws2016_libs</run_depend>
   <!-- The export tag contains other, unspecified, tags -->
   <export>
     <!-- Other tools can request additional information be placed here -->
