@@ -77,14 +77,15 @@ namespace rws2016_aabdolmaleki
                 string first_refframe = name;
                 string second_refframe = p.name;
 
-                ros::Duration(0.1).sleep(); //To allow the listener to hear messages
+                ros::Duration(0.01).sleep(); //To allow the listener to hear messages
                 tf::StampedTransform st; //The pose of the player
                 try{
                     listener.lookupTransform(first_refframe, second_refframe, ros::Time(0), st);
                 }
                 catch (tf::TransformException& ex){
                     ROS_ERROR("%s",ex.what());
-                    ros::Duration(1.0).sleep();
+                    ros::Duration(0.05).sleep();
+		    return 999;
                 }
 
                 tf::Transform t;
