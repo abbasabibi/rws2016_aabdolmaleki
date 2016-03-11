@@ -417,7 +417,7 @@ class Player
                //4. Move maximum displacement towards angle to prey (limited by min, max)
 
                //Step 1
-              // string closest_prey = getNameOfClosestPrey();
+               string closest_prey = getNameOfClosestPrey();
               // string closest_hunter = getNameOfClosestHunter();
 
                //ROS_INFO("Closest prey is %s", closest_prey.c_str());
@@ -441,7 +441,7 @@ class Player
                //if(flag == 0)
 
                //{
-            	   double angle = getAngle(getNameofMyplayer());
+            	   double angle = getAngle(closest_prey);
 
                //Step 3
                	  double displacement = msg.cat; //I am a cat, others may choose another animal
