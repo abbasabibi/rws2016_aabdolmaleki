@@ -84,7 +84,7 @@ namespace rws2016_aabdolmaleki
                 }
                 catch (tf::TransformException& ex){
                     ROS_ERROR("%s",ex.what());
-                    ros::Duration(0.05).sleep();
+                    ros::Duration(0.1).sleep();
 		    return 999;
                 }
 
